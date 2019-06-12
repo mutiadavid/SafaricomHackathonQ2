@@ -29,9 +29,9 @@ namespace SafaricomHackathonQ2.API.Controllers
         }
 
         [HttpGet("DeActivateVouchers/{duration}")]
-        public async Task<IActionResult> DeActivateVouchersAsync(TimeSpan duration)
+        public async Task<IActionResult> DeActivateVouchersAsync(int duration = 5)
         {
-           await _creditVoucherService.DeActivateVouchersAsync(duration);
+           await _creditVoucherService.DeActivateVouchersAsync(TimeSpan.FromMinutes(duration));
             return Ok();
         }
         

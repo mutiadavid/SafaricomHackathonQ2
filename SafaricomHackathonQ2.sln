@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SafaricomHackathonQ2.Logic"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SafaricomHackathonQ2.API", "SafaricomHackathonQ2.API\SafaricomHackathonQ2.API.csproj", "{02D5889C-D3C4-4EF7-A108-B381C5EC568D}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D53F8DD6-A45F-4F00-8304-9167697D5F81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{02D5889C-D3C4-4EF7-A108-B381C5EC568D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02D5889C-D3C4-4EF7-A108-B381C5EC568D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02D5889C-D3C4-4EF7-A108-B381C5EC568D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D53F8DD6-A45F-4F00-8304-9167697D5F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D53F8DD6-A45F-4F00-8304-9167697D5F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D53F8DD6-A45F-4F00-8304-9167697D5F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D53F8DD6-A45F-4F00-8304-9167697D5F81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
