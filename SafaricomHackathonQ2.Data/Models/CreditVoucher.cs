@@ -13,6 +13,7 @@ namespace SafaricomHackathonQ2.Data.Models
             DateUpdated = DateTime.Now;
             ExpiryDate = DateTime.Now.AddDays(30);
             SerialNumber = Guid.NewGuid().ToString();
+            Deleted = false;
         }
 
         public Guid Id { get; set; }
@@ -23,6 +24,7 @@ namespace SafaricomHackathonQ2.Data.Models
         public DateTime DateCreated { get; set; }
         public DateTime DateUpdated { get; set; }
         public VoucherStatus VoucherStatus { get; set; }
+        public bool Deleted { get; set; }
 
         public virtual User User { get; set; }
         public Guid? UserId { get; set; }

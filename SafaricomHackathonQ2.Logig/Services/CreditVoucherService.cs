@@ -81,7 +81,11 @@ namespace SafaricomHackathonQ2.Logic.Services
 
             if (vouchers != null && vouchers.Any())
             {
-                _context.CreditVouchers.RemoveRange(vouchers);
+                //_context.CreditVouchers.RemoveRange(vouchers);
+                foreach (var voucher in vouchers)
+                {
+                    voucher.Deleted = true;
+                }
                 await _context.SaveChangesAsync();
             };
         }
@@ -136,7 +140,7 @@ namespace SafaricomHackathonQ2.Logic.Services
             if (user == null) return null;
 
             var voucher = await _context.CreditVouchers.FirstOrDefaultAsync(x => x.VoucherNumber == loadVoucherRequest.VoucherNumber);
-            if (voucher == null) return null;
+            if (voucher == null || voucher.ExpiryDate < DateTime.Now || voucher.VoucherStatus != VoucherStatus.Active) return null;
 
             user.Balamce = voucher.Amount;
             voucher.UserId = user.Id;
