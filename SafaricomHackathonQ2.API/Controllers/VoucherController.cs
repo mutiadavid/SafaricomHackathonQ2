@@ -20,6 +20,11 @@ namespace SafaricomHackathonQ2.API.Controllers
             _creditVoucherService = creditVoucherService;
         }
 
+        /// <summary>
+        /// Create a credit voucher
+        /// </summary>
+        /// <param name="createVoucherRequest">Params for creating voucher</param>
+        /// <returns></returns>
         [HttpPost("Create")]
         [ProducesResponseType(typeof(VoucherResponse),StatusCodes.Status200OK)]
         public async Task<IActionResult> CreateVoucherAsync([FromBody] CreateVoucherRequest createVoucherRequest)
@@ -28,6 +33,11 @@ namespace SafaricomHackathonQ2.API.Controllers
             return Ok(result);
         }
 
+        /// <summary>
+        /// De-Activating vouchers which have been active for more than given duration
+        /// </summary>
+        /// <param name="duration">duration from which to de-activate</param>
+        /// <returns></returns>
         [HttpGet("DeActivateVouchers/{duration}")]
         public async Task<IActionResult> DeActivateVouchersAsync(int duration = 5)
         {
@@ -35,6 +45,11 @@ namespace SafaricomHackathonQ2.API.Controllers
             return Ok();
         }
         
+
+        /// <summary>
+        /// Delete vouchers whose status is InActive
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("DeleteInActiveVouchers")]
         public async Task<IActionResult> DeleteInActiveVouchersAsync()
         {
@@ -42,6 +57,10 @@ namespace SafaricomHackathonQ2.API.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Get vouchers created in less than 3 min
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("Get3MinVouchers")]
         [ProducesResponseType(typeof(List<VoucherResponse>), StatusCodes.Status200OK)]
         public async Task<IActionResult> Get3MinVouchersAsync()
@@ -50,6 +69,11 @@ namespace SafaricomHackathonQ2.API.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Get vourcher by its serial number
+        /// </summary>
+        /// <param name="serialNumber">Voucher serial number</param>
+        /// <returns></returns>
         [HttpGet("GetVourcherbySerialNumber/{serialNumber}")]
         [ProducesResponseType(typeof(VoucherResponse), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetVourcherbySerialNumberAsync(string serialNumber)
@@ -57,8 +81,12 @@ namespace SafaricomHackathonQ2.API.Controllers
            var response = await _creditVoucherService.GetVourcherbySerialNumberAsync(serialNumber);
             return Ok(response);
         }
-
-        [HttpGet("UserLoadVoucher")]
+        /// <summary>
+        /// Method for users to load credit into the their phone
+        /// </summary>
+        /// <param name="loadVoucherRequest">Params for loading a voucher</param>
+        /// <returns></returns>
+        [HttpPost("UserLoadVoucher")]
         [ProducesResponseType(typeof(LoadVoucherResponse), StatusCodes.Status200OK)]
         public async Task<IActionResult> UserLoadVoucher([FromBody] LoadVoucherRequest loadVoucherRequest)
         {

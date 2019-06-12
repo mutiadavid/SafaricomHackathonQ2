@@ -19,6 +19,11 @@ namespace SafaricomHackathonQ2.API.Controllers
             _userService = userService;
         }
 
+        /// <summary>
+        /// Creating user - one be buying credit
+        /// </summary>
+        /// <param name="createuserRequest"></param>
+        /// <returns></returns>
         [HttpPost("Create")]
         [ProducesResponseType(typeof(Guid), StatusCodes.Status200OK)]
         public async Task<IActionResult> CreateUserAsync([FromBody] CreateUserRequest createuserRequest)

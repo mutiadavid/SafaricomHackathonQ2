@@ -19,6 +19,12 @@ namespace SafaricomHackathonQ2.API.Controllers
             _vendorService = vendorService;
         }
 
+        /// <summary>
+        /// Create vendor for voucher distribution
+        /// </summary>
+        /// <param name="createVendorRequest"></param>
+        /// <returns></returns>
+
         [HttpPost("Create")]
         [ProducesResponseType(typeof(Guid),StatusCodes.Status200OK)]
         public async Task<IActionResult> CreateVendorAsync([FromBody] CreateVendorRequest createVendorRequest)
