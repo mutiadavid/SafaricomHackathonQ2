@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SafaricomHackathonQ2.Logic"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SafaricomHackathonQ2.API", "SafaricomHackathonQ2.API\SafaricomHackathonQ2.API.csproj", "{02D5889C-D3C4-4EF7-A108-B381C5EC568D}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D53F8DD6-A45F-4F00-8304-9167697D5F81}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SafaricomHackathonQ2.VoucherCron", "SafaricomHackathonQ2.VoucherCron\SafaricomHackathonQ2.VoucherCron.csproj", "{A7F2F6A2-E3E2-4FDE-8506-86FE3FCCBD87}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{02D5889C-D3C4-4EF7-A108-B381C5EC568D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02D5889C-D3C4-4EF7-A108-B381C5EC568D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02D5889C-D3C4-4EF7-A108-B381C5EC568D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D53F8DD6-A45F-4F00-8304-9167697D5F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D53F8DD6-A45F-4F00-8304-9167697D5F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D53F8DD6-A45F-4F00-8304-9167697D5F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D53F8DD6-A45F-4F00-8304-9167697D5F81}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A7F2F6A2-E3E2-4FDE-8506-86FE3FCCBD87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A7F2F6A2-E3E2-4FDE-8506-86FE3FCCBD87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7F2F6A2-E3E2-4FDE-8506-86FE3FCCBD87}.Release|Any CPU.ActiveCfg = Release|Any CPU
