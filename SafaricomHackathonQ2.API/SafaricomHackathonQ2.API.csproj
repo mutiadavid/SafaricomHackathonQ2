@@ -8,10 +8,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\SafaricomHackathonQ2.Data\SafaricomHackathonQ2.Data.csproj" />
+    <ProjectReference Include="..\SafaricomHackathonQ2.Logig\SafaricomHackathonQ2.Logic.csproj" />
   </ItemGroup>
 
 </Project>

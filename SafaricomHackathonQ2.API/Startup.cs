@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using SafaricomHackathonQ2.Data;
+using SafaricomHackathonQ2.Logic.Services;
+using SafaricomHackathonQ2.Logic.Services.Contracts;
 
 namespace SafaricomHackathonQ2.API
 {
@@ -28,6 +30,11 @@ namespace SafaricomHackathonQ2.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<SafaricomContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("Database")));
+
+
+            //dependency inject our services
+            services.AddTransient<IVendorsService, VendorsService>();
+            services.AddTransient<IUsersService, UsersService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
