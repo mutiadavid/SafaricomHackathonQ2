@@ -9,6 +9,10 @@ namespace SafaricomHackathonQ2.Data.Models
         public CreditVoucher()
         {
             VoucherStatus = VoucherStatus.Active;
+            DateCreated = DateTime.Now;
+            DateUpdated = DateTime.Now;
+            ExpiryDate = DateTime.Now.AddDays(30);
+            SerialNumber = Guid.NewGuid().ToString();
         }
 
         public Guid Id { get; set; }

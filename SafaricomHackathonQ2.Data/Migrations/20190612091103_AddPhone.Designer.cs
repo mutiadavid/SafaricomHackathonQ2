@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SafaricomHackathonQ2.Data;
 
 namespace SafaricomHackathonQ2.Data.Migrations
 {
     [DbContext(typeof(SafaricomContext))]
-    partial class SafaricomContextModelSnapshot : ModelSnapshot
+    [Migration("20190612091103_AddPhone")]
+    partial class AddPhone
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
